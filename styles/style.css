@@ -21,18 +21,6 @@
   align-items: center;
 }
 
-.one,
-.five {
-  width: 200px;
-  height: 300px;
-}
-
-.two,
-.four {
-  width: 250px;
-  height: 400px;
-}
-
 .three {
   width: 300px;
   height: 250px;
@@ -83,20 +71,20 @@ video {
   display: flex;
   bottom: 133%;
   left: 50%;
-  gap: 40%;
+  gap: 42%;
   transform: translateX(-50%);
   color: white;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   align-items: center;
   justify-content: center;
   height: 15.6%;
   border-radius: 20px;
   width: 92.6%;
-  background: rgba(0, 0, 0, 0.8);
 }
 .text-overlay .left-overlay {
   display: flex;
   gap: 12px;
+  margin-top: 11px;
 }
 .text-overlay .right-overlay {
   margin-top: 10px;
