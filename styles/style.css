@@ -18,6 +18,7 @@
 
 .video-div {
   display: flex;
+  gap: 34px;
   align-items: center;
 }
 
@@ -56,6 +57,7 @@ video {
   right: 4%;
   top: 2%;
   cursor: pointer;
+  z-index: 10;
   background: grey;
   border-radius: 50%;
   color: white;
@@ -68,8 +70,9 @@ video {
 
 .text-overlay {
   position: absolute;
+  overflow: hidden;
   display: flex;
-  bottom: 133%;
+  bottom: 110%;
   left: 50%;
   gap: 42%;
   transform: translateX(-50%);
@@ -79,7 +82,7 @@ video {
   justify-content: center;
   height: 15.6%;
   border-radius: 20px;
-  width: 92.6%;
+  width: 60%;
 }
 .text-overlay .left-overlay {
   display: flex;

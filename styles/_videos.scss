@@ -2,7 +2,6 @@
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   left: 0;
-    // display: none;
   top: 0;
   height: 100vh;
   width: 100%;
@@ -20,39 +19,31 @@
 
 .video-div {
   display: flex;
-  //   margin-bottom:34px;
+  gap: 34px;
   align-items: center;
 }
-// .one,
-// .five {
-//   width: 200px;
-//   height: 300px;
-// }
-// .two,
-// .four {
-//   width: 250px;
-//   height: 400px;
-// }
+
+
 .three {
   width: 300px;
   height: 250px;
   display: flex;
-  // gap: 20px;
-
   position: relative;
-  margin: 14px ;
+  margin: 14px;
+
   i {
-   
+
     cursor: pointer;
-   
+
   }
 
-  .fa-less-than .fa-solid{
+  .fa-less-than .fa-solid {
     left: 13px;
     cursor: pointer;
     position: absolute;
   }
-  .less-than{
+
+  .less-than {
     font-weight: 700;
     left: 13px;
     cursor: pointer;
@@ -69,63 +60,68 @@ video {
   border-radius: 23px;
 }
 
-.cross-icon{
-    position: absolute;
-    right: 4%;
-    top: 2%;
-    cursor: pointer;
-    background: grey;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    width: 20px;
-    height: 20px;
-    font-size: 1.5rem;
+.cross-icon {
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  cursor: pointer;
+  z-index: 10;
+  background: grey;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  width: 20px;
+  height: 20px;
+  font-size: 1.5rem;
 }
+
 
 
 
 .text-overlay {
   position: absolute;
+  overflow: hidden;
   display: flex;
-  bottom: 133%;
+  bottom: 110%;
   // padding: 10px;
-  
+
   left: 50%;
 
 
-gap: 42%;  transform: translateX(-50%);
+  gap: 42%;
+  transform: translateX(-50%);
   color: white;
   font-size: 0.7rem;
   align-items: center;
   justify-content: center;
- 
-  
+
+
   height: 15.6%;
-  
+
   border-radius: 20px;
-  width: 92.6%;
- 
-  // background: rgba(0, 0, 0, 0.8); 
-  
+  width: 60%;
 
 
-  .left-overlay{
-      display: flex;
-      gap: 12px;
-margin-top: 11px;
+
+
+
+  .left-overlay {
+    display: flex;
+    gap: 12px;
+    margin-top: 11px;
   }
-  .right-overlay{
+
+  .right-overlay {
     margin-top: 10px;
-      display: flex;
-      cursor: pointer;
-      gap: 15px;
-      font-size: 14px;
+    display: flex;
+    cursor: pointer;
+    gap: 15px;
+    font-size: 14px;
   }
 }
 
-.dp{
+.dp {
   width: 30px;
   height: 30px;
   border-radius: 50%;
