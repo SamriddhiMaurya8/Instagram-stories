@@ -4,52 +4,33 @@
   left: 0;
   top: 0;
   height: 100vh;
+  display: none;
   width: 100%;
 }
 
 .videos {
   display: flex;
   height: 100vh;
-  gap: 50px;
-  justify-content: space-around;
+  gap: 17px;
+  justify-content: center;
   padding: 34px;
   align-items: center;
 }
-
-.video-div {
-  display: flex;
-  gap: 34px;
-  align-items: center;
-}
-
-.three {
-  width: 300px;
-  height: 250px;
-  display: flex;
-  position: relative;
-  margin: 14px;
-}
-.three i {
-  cursor: pointer;
-}
-.three .fa-less-than .fa-solid {
-  left: 13px;
-  cursor: pointer;
-  position: absolute;
-}
-.three .less-than {
-  font-weight: 700;
-  left: 13px;
-  cursor: pointer;
-}
-.three .fa-greater-than {
-  right: 13px;
-}
-
-video {
-  width: 100%;
-  height: 100%;
+.videos__one video, .videos__two video {
   border-radius: 23px;
+  height: 25rem;
+  width: 100%;
+}
+.videos__three {
+  position: relative;
+}
+.videos__three video {
+  height: 30rem;
+  border-radius: 23px;
+  width: 100%;
+}
+.videos i {
+  cursor: pointer;
 }
 
 .cross-icon {
@@ -72,35 +53,33 @@ video {
   position: absolute;
   overflow: hidden;
   display: flex;
-  bottom: 110%;
+  top: -2%;
   left: 50%;
-  gap: 42%;
   transform: translateX(-50%);
   color: white;
   font-size: 0.7rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 15.6%;
   border-radius: 20px;
-  width: 60%;
+  width: 90%;
 }
-.text-overlay .left-overlay {
+.text-overlay__left-overlay {
   display: flex;
   gap: 12px;
   margin-top: 11px;
 }
-.text-overlay .right-overlay {
+.text-overlay__left-overlay .dp {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.text-overlay__right-overlay {
   margin-top: 10px;
   display: flex;
   cursor: pointer;
   gap: 15px;
   font-size: 14px;
-}
-
-.dp {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
 }
 
 .border-grey {

@@ -4,61 +4,43 @@
   left: 0;
   top: 0;
   height: 100vh;
+  display: none;
   width: 100%;
 }
 
 .videos {
   display: flex;
   height: 100vh;
-  gap: 50px;
-  justify-content: space-around;
+  gap: 17px;
+  justify-content: center;
   padding: 34px;
 
   align-items: center;
-}
-
-.video-div {
-  display: flex;
-  gap: 34px;
-  align-items: center;
-}
 
 
-.three {
-  width: 300px;
-  height: 250px;
-  display: flex;
-  position: relative;
-  margin: 14px;
+  &__one, &__two{
+    video{
+border-radius: 23px;
+      height: 25rem;
+      width: 100%;
+    }
+  }
+  &__three{
+    position: relative;
+    video{
 
+      height: 30rem;
+      border-radius: 23px;
+      width: 100%;
+    }
+  }
   i {
-
-    cursor: pointer;
-
-  }
-
-  .fa-less-than .fa-solid {
-    left: 13px;
-    cursor: pointer;
-    position: absolute;
-  }
-
-  .less-than {
-    font-weight: 700;
-    left: 13px;
     cursor: pointer;
   }
 
-  .fa-greater-than {
-    right: 13px;
-  }
+  
 }
 
-video {
-  width: 100%;
-  height: 100%;
-  border-radius: 23px;
-}
 
 .cross-icon {
   position: absolute;
@@ -83,36 +65,30 @@ video {
   position: absolute;
   overflow: hidden;
   display: flex;
-  bottom: 110%;
-  // padding: 10px;
-
+  top: -2% ;
   left: 50%;
-
-
-  gap: 42%;
   transform: translateX(-50%);
   color: white;
   font-size: 0.7rem;
   align-items: center;
-  justify-content: center;
-
-
+  justify-content: space-between;
   height: 15.6%;
-
   border-radius: 20px;
-  width: 60%;
-
-
-
-
-
-  .left-overlay {
+  width: 90%;
+  &__left-overlay {
     display: flex;
     gap: 12px;
     margin-top: 11px;
+
+    .dp {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    
   }
 
-  .right-overlay {
+  &__right-overlay {
     margin-top: 10px;
     display: flex;
     cursor: pointer;
@@ -121,13 +97,11 @@ video {
   }
 }
 
-.dp {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
 
 
 .border-grey {
   border: 2px solid grey;
 }
+
+
+
