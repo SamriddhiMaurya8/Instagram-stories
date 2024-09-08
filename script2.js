@@ -100,7 +100,7 @@ e.preventDefault();
 
 
 const contentElements = document.querySelectorAll(".content");
-contentElements.forEach((content, index) => {
+contentElements.forEach((content , index) => {
   content.addEventListener("click", () => {
     console.log(`clicked ${index}`);
     currentIndex = index;
@@ -108,7 +108,7 @@ contentElements.forEach((content, index) => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+
   const images = document.querySelectorAll('.content img');
 
   images.forEach(img => {
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       img.style.border = '2px solid grey';
     });
   });
-});
+
 
 
 
