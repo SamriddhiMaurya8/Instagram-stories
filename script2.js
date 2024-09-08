@@ -147,21 +147,40 @@ const createStories = (index) => {
   const videoDiv1 = document.createElement("div");
   videoDiv1.classList.add("video-div", "videos__one");
   const video1 = document.createElement("video");
-  video1.src = allStories[index > 0 ? index - 1 : allStories.length - 1].videoUrl;
+
+  for (let i = 0; i < allStories.length; i++) {
+    if (index > 0) {
+      video1.src = allStories[i].videoUrl; 
+    }
+     else if (i === index + 1) {
+      video1.style.display='none'; 
+      // leftIcon.style.display='none' ; 
+    }
+  }
+
   video1.controls = true;
   videoDiv1.appendChild(video1);
 
 
-  // const videoDiv3 = document.createElement("div");
-  // videoDiv3.classList.add("video-div", "three");
+
 
   const leftIconDiv = document.createElement("div");
   leftIconDiv.classList.add("left-icon-div");
 
   const leftIcon = document.createElement("i");
   leftIcon.classList.add("fa-solid", "fa-less-than");
-  leftIcon.style.color = "#fff";
+  for (let i = 0; i < allStories.length; i++) {
+    if (index > 0) {
+      leftIcon.style.color = "#fff";
+      
+    }
+     else if (i === index + 1) {
+      // video1.style.display='none'; 
+      leftIcon.style.display='none' ; 
+    }
+  }
   leftIconDiv.appendChild(leftIcon);
+
 
   const videoDiv3 = document.createElement("div");
   videoDiv3.classList.add("video-div", "videos__three");
@@ -191,15 +210,13 @@ const createStories = (index) => {
   const rightOverlay = document.createElement("div");
   rightOverlay.classList.add("text-overlay__right-overlay");
 
-  // const pauseIconn = document.createElement("i");
-  // pauseIconn.classList.add("fa-solid", "fa-pause");
-  // pauseIconn.style.color = "#fff";
+  
 
   const elllipse = document.createElement("i");
   elllipse.classList.add("fa-solid", "fa-ellipsis");
   elllipse.style.color = "#fff";
 
-  // rightOverlay.appendChild(pauseIconn);
+
   rightOverlay.appendChild(elllipse);
 
   overlay.appendChild(leftOverlay);
@@ -218,7 +235,16 @@ const createStories = (index) => {
 
   const rightIcon = document.createElement("i");
   rightIcon.classList.add("fa-solid", "fa-greater-than");
-  rightIcon.style.color = "#fff";
+
+  for(let i = 0 ; i < allStories.length-1 ; i++){
+    if(index===allStories.length-1){
+      rightIcon.style.display = "none";
+      
+    }else{
+
+      rightIcon.style.color = "#fff";
+    }
+  }
   rightIconDiv.appendChild(rightIcon);
 
 
@@ -229,7 +255,7 @@ const createStories = (index) => {
 
   for (let i = 0; i < allStories.length; i++) {
     if (index === allStories.length - 1) {
-      video2.src = allStories[0].videoUrl; 
+      video2.style.display='none'; 
     }
      else if (i === index + 1) {
       video2.src = allStories[i].videoUrl; 
@@ -260,19 +286,6 @@ const createStories = (index) => {
     
     videoContainer.remove();
   });
-
-  // pauseIconn.addEventListener("click", (e) => {
-  //   e.stopPropagation();
-  
-  //   if (video3.paused) {
-  //     video3.play();
-  //     pauseIconn.innerHTML = '<i class="fa-solid fa-play" style="color: rgb(255, 255, 255);"></i>';
-  //   } else {
-  //     video3.pause();
-  //     pauseIconn.innerHTML = '<i class="fa-solid fa-pause" style="color: rgb(255, 255, 255);"></i>';
-  //   }
-  // });
-  
 
 
   leftIconDiv.addEventListener("click", () => {
